@@ -1,0 +1,40 @@
+<div>
+  <h1>{{title}}</h1>
+  <p>{{count}}</p>
+  <button (click)="onButtonClick()" >Click me</button>
+
+  <h1>Ex1</h1>
+  <h2>Method#1</h2>
+  <input type="text" id="meth1value1">
+  <input type="text" id="meth1value2">
+  <button (click)="Meth1Sum()">Somme</button>
+  <p>{{result}}</p>
+  <h2>Method#2</h2>
+  <input type="text" (keyup)="value1KeyUp($event)">
+  <input type="text" (keyup)="value2KeyUp($event)">
+  <button (click)="Meth2Sum()">Somme</button>
+  <p>{{result2}}</p>
+
+  <h1>Ex2</h1>
+  <p *ngFor="let string of stringlist">{{string}}</p>
+  <button (click)="addToStringList()">Add</button>
+
+  <p>{{age1}}</p>
+  <p *ngIf="age1>18">majeur</p>
+  <p *ngIf="age1<18">mineur</p>
+  <p>{{age2}}</p>
+  <p *ngIf="age2>18">majeur</p>
+  <p *ngIf="age2<18">mineur</p>
+  <p></p>
+
+  <h1>Ex3</h1>
+  <input type="text" id="itemValue">
+  <input type="number" id="itemStock">
+  <button (click)="addItemToList()">Add</button>
+  <div *ngFor="let item of items">
+    <p>Name: {{item.Name}}</p>
+    <p>Stock: {{item.Stock}}</p>
+    <p *ngIf="item.Stock == 0">Out of Stock</p>
+
+  </div>
+</div>
